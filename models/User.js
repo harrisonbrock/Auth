@@ -32,7 +32,7 @@ userSchema.pre('save', function (next) {
 
 
 // Check if passwords match
-userSchema.method.validatePassword = function (passwordGuess) {
+userSchema.methods.validatePassword = function (passwordGuess) {
   return bcrypt.compare(passwordGuess, this.password);
 };
 
